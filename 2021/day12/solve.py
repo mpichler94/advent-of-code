@@ -15,7 +15,7 @@ class PartA(Day):
     def can_visit(node, visited_small_caves):
         return node not in visited_small_caves
 
-    def explore_neighbors(self, graph, node, num_paths, visited_small_caves, can_visit):
+    def explore_neighbors(self, graph: net.Graph, node, num_paths, visited_small_caves, can_visit):
         if not can_visit(node, visited_small_caves):
             return num_paths
         if node == node.lower():    # small cave
