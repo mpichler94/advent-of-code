@@ -144,5 +144,7 @@ class Day:
     @staticmethod
     def do_day(day, year, part_a, part_b):
         puzzle = Puzzle(day=day, year=year)
-        part_a().do_part(puzzle)
-        part_b().do_part(puzzle)
+        if part_a is not None:
+            part_a().do_part(puzzle)
+        if part_b is not None:
+            part_b().do_part(puzzle)
